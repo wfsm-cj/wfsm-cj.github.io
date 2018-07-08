@@ -154,6 +154,214 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-帮忙用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/english/帮忙用语/">帮忙用语</a>
+    </h1>
+  
+
+        
+        <a href="/english/帮忙用语/" class="archive-article-date">
+  	<time datetime="2018-06-10T12:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="提供帮忙用语"><a href="#提供帮忙用语" class="headerlink" title="提供帮忙用语"></a>提供帮忙用语</h5><ul>
+<li>Can I help you?</li>
+<li>What can I do for you ?</li>
+<li>Is there anything I can do for you?
+        
+          <a class="article-more-a" href="/english/帮忙用语/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">初级口语</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/english/帮忙用语/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/problem/问题/">问题</a>
+    </h1>
+  
+
+        
+        <a href="/problem/问题/" class="archive-article-date">
+  	<time datetime="2018-06-10T08:38:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>遇到些奇葩问题<br>如git 报错： The remote end hung up unexpectedly  <mark>remote：遥远的  hung up 挂断 unexpected 出乎意料</mark><br>那遥远的尽头突然挂断了。。。。<br><strong>*应该是网络问题**</strong> </p>
+<hr>
+<p>在写游戏是，将多个对象综合到一起，前面不识别。。别人的代码就可以。。我的估计是哪个位置写错了，待续。。。。</p>
+<hr>
+<p>vuex 异步导入数据， 组件无法异步获取问题。。待续。。。。</p>
+<hr>
+<p>vue 组件异步导入数据，获取问题。。。。用watch监听<br>this.$watch:{<br>    hehe:function(newValue,oldValue){<br>        //…… 监听执行<br>    }<br>}</p>
+<hr>
+<p>在main.js引入axios 可以这么导入：</p>
+<pre><code>import axios from &apos;axios&apos;;
+Vue.prototype.$http=axios;
+
+随后用： this.$http({
+        //调用axios
+    })
+</code></pre><hr>
+<pre><code>&lt;router-link :to=&quot;{name:&apos;item&apos;,params:{id:item.id}}&quot;&gt;&lt;/router-link&gt;
+动态绑定的to
+</code></pre><hr>
+<p>英文字母的连贯性。。一个很长的英文，不会折行，而且会使容器可移动</p>
+<hr>
+<p>可以将目录 分为 common  components view  分别放不同的组件</p>
+<hr>
+<p>static 文件夹下可以存静态资源</p>
+<hr>
+<p>父组件向子组件传递信息<br>子组件用props接受<br> this.$props:{<br>     propA:{<br>        type:Array,<br>        required:true,<br>        //….很多属性<br>     }<br>}<br>this.$props.名字 获取这个值<br>父组件在传递的时候  v-bind：这个值=“值”</p>
+<hr>
+<p>beforeRouteEnter(to,from,next){}</p>
+<hr>
+<p>视图空间？<br>{<br>    path:’/‘,<br>    name:’root’,<br>    components:{<br>        main:Article,<br>        sidebar:SideBar  //默认值是default<br>    }<br>}<br>配合 <router-view name="main"></router-view><br> <router-view name="sidebar"></router-view><br> <router-viwe></router-viwe></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">problem</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/problem//" class="article-tag-list-link color3">problem</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/problem/问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -423,186 +631,6 @@ vue init webpack my-project
 
 
   
-    <article id="post-game" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/game/game/">game</a>
-    </h1>
-  
-
-        
-        <a href="/game/game/" class="archive-article-date">
-  	<time datetime="2018-06-09T14:32:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="geris-俄罗斯方块"><a href="#geris-俄罗斯方块" class="headerlink" title="geris  俄罗斯方块"></a>geris  俄罗斯方块</h5><p><a href="http://wfsm.xyz/game-js/geris">http://wfsm.xyz/game-js/geris</a></p>
-<h5 id="snake-贪吃蛇"><a href="#snake-贪吃蛇" class="headerlink" title="snake 贪吃蛇"></a>snake 贪吃蛇</h5><p><a href="http://wfsm.xyz/game-js/snake">http://wfsm.xyz/game-js/snake</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">game</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/game//" class="article-tag-list-link color5">game</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/game/game/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-时间用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/english/时间用语/">时间用语</a>
-    </h1>
-  
-
-        
-        <a href="/english/时间用语/" class="archive-article-date">
-  	<time datetime="2018-06-09T13:31:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="时刻"><a href="#时刻" class="headerlink" title="时刻"></a>时刻</h5><p><strong><em>询问时间</em></strong></p>
-<ul>
-<li>What time is it now ?</li>
-<li>Do you have the time?  <mark>现在几点  do you have time 你有 时间吗</mark>
-        
-          <a class="article-more-a" href="/english/时间用语/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">初级口语</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/english/时间用语/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
@@ -708,7 +736,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
+                <a href="javascript:void(0)" class="js-tag color4">新东方</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -720,11 +748,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">problem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -732,11 +756,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -744,15 +772,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">vuex</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">problem</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -768,11 +800,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
             
             <div class="clearfix"></div>
