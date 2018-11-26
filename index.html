@@ -154,27 +154,126 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-heh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-bootstrap写侧面导航" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/js/heh/">heh</a>
+      <a class="article-title" href="/bootstrap/bootstrap写侧面导航/">bootstrap写侧面导航</a>
     </h1>
   
 
         
-        <a href="/js/heh/" class="archive-article-date">
-  	<time datetime="2018-11-26T05:27:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/bootstrap/bootstrap写侧面导航/" class="archive-article-date">
+  	<time datetime="2018-07-23T14:29:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h5 id="bootstrap-导航"><a href="#bootstrap-导航" class="headerlink" title="bootstrap 导航"></a>bootstrap 导航</h5><p>默认导航栏</p>
+<ul>
+<li>向nav标签添加 class为 .navbar  .navbar-default </li>
+<li>向上面的元素添加role=”navigation”  有助于增加可访问性</li>
+<li>向div元素添加一个标题class 为 .navbar-header 内部包含了带有class为 .navbar-brand 的 a元素。。这会让文本看起来更大一号</li>
+<li>为了向导航添加链接，只需要简单的添加带有class为 .nav .navbar-nav 的无序列表即可</li>
+</ul>
+<p>因为写的默认是向下滑的导航，而手机端往往是侧滑的导航<br>如下：</p>
+<ul>
+<li>写一个默认导航设置class为 .visible-md .visible-lg  在pc端显示</li>
+<li>写一个手机端导航 设置 class为 .visible-xs .visible-sm 在手机端显示</li>
+<li>写一个手机端控制导航按钮</li>
+<li>为手机端导航和控制按钮设置样式 利用transform:translateX(-220px);来隐藏和显示</li>
+</ul>
+<pre><code>&lt;!--手机导航栏--&gt;
+&lt;div id=&quot;mobile-menu&quot; class=&quot;mobile-nav visible-xs visible-sm&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;SVN&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--pc端导航--&gt;
+&lt;nav class=&quot;navbar navbar-inverse visible-lg visible-md&quot; role=&quot;navigation&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;div class=&quot;navbar-header&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;菜鸟教程&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;IOS&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;SVN&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot;&gt;Java
+                    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+                &lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+&lt;!--手机导航控制按钮--&gt;
+&lt;div class=&quot;nav-btn visible-xs visible-sm&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;mobile-nav-toggle&quot; id=&quot;mobile-nav-toggle&quot;&gt;
+        &lt;span class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+
+//css
+#mobile-menu{
+    position: fixed;
+    top: 0;left: 0;width: 220px;height: 100%;background-color: #373737;z-index: 99;
+    transition: all 0.3s ease-in;
+}
+a:hover,a:focus{
+    text-decoration: none;
+}
+.mobile-nav ul li a{
+    color: gray;display: block;padding: 1em 5%;
+    border-top: 1px solid #4f4f4f;
+    border-bottom: 1px solid #292929;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+.mobile-nav ul li a:hover{
+    background: #23a1f6;
+    color: #fff;
+}
+.show-nav{
+    transform: translateX(0);
+}
+.hide-nav{
+    transform: translateX(-220px);
+}
+.moblie-nav-toggle{
+    height: 35px;
+    line-height: 35px;
+    width: 35px;
+    background-color: #23A1F6;
+    color: #FFFFFF;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}    
+.nav-btn{
+    position: fixed;
+    top: 20px;right: 20px;
+}
+
+
+//js
+$(function(){
+    $(&apos;#mobile-nav-toggle&apos;).click(function(){
+        var mobileMenu=$(&apos;#mobile-menu&apos;);
+        if(mobileMenu.hasClass(&apos;show-nav&apos;)){
+                mobileMenu.addClass(&apos;hide-nav&apos;).removeClass(&apos;show-nav&apos;);
+        }else{
+            mobileMenu.addClass(&apos;show-nav&apos;).removeClass(&apos;hide-nav&apos;)
+        }
+    })
+})
+</code></pre>
       
 
       
@@ -188,7 +287,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        			<a href="/categories/bootstrap//" class="article-tag-list-link color5">bootstrap</a>
         		</li>
       		
 		</ul>
@@ -197,7 +296,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/js/heh/">展开全文 >></a>
+          <a class="article-more-a" href="/bootstrap/bootstrap写侧面导航/">展开全文 >></a>
         </p>
       
 
@@ -227,27 +326,76 @@
 
 
   
-    <article id="post-wath" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-bootstrap-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/js/wath/">wath</a>
+      <a class="article-title" href="/bootstrap/bootstrap-01/">bootstrap-01</a>
     </h1>
   
 
         
-        <a href="/js/wath/" class="archive-article-date">
-  	<time datetime="2018-11-26T05:12:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/bootstrap/bootstrap-01/" class="archive-article-date">
+  	<time datetime="2018-07-23T02:32:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><strong><em>为了确保适当的绘制和触屏缩放，需要在head中添加viewport元数据标签</em></strong></p>
+<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;
+</code></pre><h5 id="bootstrap基本全局样式"><a href="#bootstrap基本全局样式" class="headerlink" title="bootstrap基本全局样式"></a>bootstrap基本全局样式</h5><ul>
+<li>为body元素设置  background-color:#fff;</li>
+<li>使用@font-family-base、@font-size-base 和 @font-height-base 变量作为排版的基本参数</li>
+<li>为所有链接设置了基本颜色 @link-color ,并且当链接处于 ：hover状态时才添加下划线</li>
+<li>为了增强跨浏览器表现的一致性，使用了Normalize.css。重置css样式</li>
+</ul>
+<h5 id="类"><a href="#类" class="headerlink" title="类"></a>类</h5><p><strong><em>布局容器</em></strong><br>container<br>container-fluid       <mark>fluid：流动的</mark></p>
+<p><strong><em>栅格系统</em></strong><br>栅格系统用于通过一系列的行(row)与列(column)的组合来创建页面布局</p>
+<ul>
+<li>行(row) 必须包含在 .container 或 .container-fluid 中，以便为其赋予何时的排列(aligment)和内补(padding)</li>
+<li>通过行(row)在水平方向创建一组列(column)</li>
+<li>你的内容应当放置于列(column) 内，并且，只有列(column)可以作为行(row)的直接子元素</li>
+<li>所有列都应该放在row内</li>
+<li>多余的列将另起一行排列</li>
+<li>列偏移 .col-md-offset-* 类可以将列向右侧偏移， .com-md-offset-4 元素向右偏移了4个列宽度</li>
+<li>列嵌套 在一个列中在写一个row 包含其他的列，</li>
+<li>列排序 .col-md-push-<em>  将列往后推   .col-md-pull-</em> 将列往前推</li>
+</ul>
+<p><strong><em>屏幕宽度</em></strong></p>
+<ul>
+<li>超小屏幕 768  col-xs  None(自动)  <mark>.container最大宽度</mark>  手机 自动</li>
+<li>小屏幕   768–&gt;992   col-sm   750px   平板      62px  最大列宽</li>
+<li>中等屏幕 992–&gt;1200  col-md  970px  桌面显示器    81px</li>
+<li>大屏幕  1200+    col-lg  1170px   大桌面显示器   97px</li>
+</ul>
+<h5 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h5><ul>
+<li>h1   36px</li>
+<li>h2   30px</li>
+<li>h3   24px</li>
+<li>h4   18px</li>
+<li>h5   14px</li>
+<li>h6   12px</li>
+<li>在标题内还可以包含small标签 或赋予 .small 类的元素，可以用来标记副标题<br><strong><em>页面主体</em></strong></li>
+<li>Bootstrap将全局font-size设置为14px，line-height设置为1.428，，另外p元素还被设置了等于1/2行高 即(10px)的底部外边距 margin</li>
+<li>.lead类可以让段落突出显示</li>
+<li><mark> 高亮</mark>   <del>删除</del>   <s>无用文本</s>  <ins>插入文本</ins>   <u>带下划线文本</u>  <strong>着重</strong>  <em>斜体</em></li>
+<li>small标签  小号文本  ，其内的文本将被设置为父容器字体大小的85%。标题元素中嵌套的 small 元素被设置不同的font-size   可以用 .small 类代替任何small元素</li>
+</ul>
+<p><strong><em>对齐</em></strong></p>
+<ul>
+<li>.text-left .text-right .text-center .text-justify .text-nowrap</li>
+<li>改变大小写  .text-lowercase  .text-uppercase .text-capitalize  </li>
+<li>地址 address标签</li>
+<li>引用 blockquote 标签</li>
+<li>多种引用样式 对于标准样式的 blockquote，可以在底部添加footer标签标明引用来源，来源的名称可以包裹进 cite 标签</li>
+</ul>
+<h4 id="问题专区"><a href="#问题专区" class="headerlink" title="问题专区"></a>问题专区</h4><p><strong><em>bootstrap中 @baseFontFamily是什么意思</em></strong><br>相当于我定义了一个基础变量：baseFontFamily，假设其值为 font-size:14px;color:red;<br>如 h1{@baseFontFamily}  h1，引用了这个变量</p>
+
       
 
       
@@ -255,13 +403,24 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bootstrap</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/js//" class="article-tag-list-link color3">js</a>
+        			<a href="/categories/bootstrap//" class="article-tag-list-link color5">bootstrap</a>
         		</li>
       		
 		</ul>
@@ -270,7 +429,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/js/wath/">展开全文 >></a>
+          <a class="article-more-a" href="/bootstrap/bootstrap-01/">展开全文 >></a>
         </p>
       
 
@@ -300,20 +459,20 @@
 
 
   
-    <article id="hehe-js-2" class="article article-type-hehe  article-index" itemscope itemprop="blogPost">
+    <article id="post-名字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/undefined/js-2/">js</a>
+      <a class="article-title" href="/english/名字/">名字</a>
     </h1>
   
 
         
-        <a href="/undefined/js-2/" class="archive-article-date">
-  	<time datetime="2018-11-26T05:11:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/english/名字/" class="archive-article-date">
+  	<time datetime="2018-07-08T02:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
 </a>
         
       </header>
@@ -334,7 +493,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/undefined//" class="article-tag-list-link color5">undefined</a>
+        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
         		</li>
       		
 		</ul>
@@ -343,7 +502,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/undefined/js-2/">展开全文 >></a>
+          <a class="article-more-a" href="/english/名字/">展开全文 >></a>
         </p>
       
 
@@ -373,27 +532,36 @@
 
 
   
-    <article id="hello-js-1" class="article article-type-hello  article-index" itemscope itemprop="blogPost">
+    <article id="post-7-8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/undefined/js-1/">js</a>
+      <a class="article-title" href="/日志/7-8/">7-8</a>
     </h1>
   
 
         
-        <a href="/undefined/js-1/" class="archive-article-date">
-  	<time datetime="2018-11-26T05:09:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/日志/7-8/" class="archive-article-date">
+  	<time datetime="2018-07-08T02:00:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h5 id="7-8"><a href="#7-8" class="headerlink" title="7-8"></a>7-8</h5><p>以后一周一次，或者一周两次。<br>这周比较烦，生病了。</p>
+<ul>
+<li>肠胃炎</li>
+<li>似乎没人关心我生病了，日子照常进行，该工作工作，该吃饭吃饭</li>
+<li>天天写静态页面，写的有点烦，下周还要接着写，却无法反驳</li>
+<li>婉儿也不理我，不知道怎么她了</li>
+</ul>
+<p>也许自己的生老病死与他人无关吧，只不过是一个工具而已，用的上就用，坏了就换，估计是这样<br>这几天在看书，发现一个东西，人太善良就会过于软弱。。然而人们不会把你的善良当作善良，你的重感情在别人看来是弱智。而最终给你的定论是，懦弱，无能。</p>
+<p>最近看到 朱祁镇 朱见深<br>    朱祁镇，这个皇帝一生并不算光彩，宠信过奸邪小人，打过败仗，当过俘虏，做过囚犯，杀过忠臣。他不是一个好皇帝，但是一个好人。他几乎信任了他身边的每一个人，从王振到徐有贞，再到石亨、李贤。 无论这些人是忠是歼。不管在什么样的环境，它都能够和善待人。这种心境让我感叹，这究竟是个什么样的人。 败仗之前，将权力交给他弟弟，朱祁钰，然而朱祁钰却不把他当哥哥，座上皇位后，不接他，接回来软禁，废太子，然而当他重新夺回皇位，该有仇报仇有怨报怨的时候，他第一反应却不是杀朱祁钰，等临死之前，对朱见深说出了最后的遗愿，不要任何人殉葬。。此人是真善良。<br>    然而他错信了不善良的人，他认为真诚的对待每一个人，他们便会真诚的为自己工作，所以选择相信身边每一个人，也不是说他的信任有错，只是作为帝王，这种信任是不被允许的。太信任就会出现一些奸佞，太重感情就会被利用。<br>    两岁被立为太子，因为朱祁镇被俘，太子也当不成了，还被监控起来。这才有了一段不伦之恋，我也喜欢比我大的，有时候我在想，到底是找一个母亲还是找一个婆娘。<br>        我发现一个共性，明朝的大多数皇帝，都很善良，可能是看惯了，朱元璋，朱棣的残暴，发现不应该如此。然而善良的人几乎不会是一个好皇帝，或者迟早被杀害的皇帝(赵匡胤)，你把别人当朋友，别人可不当你是朋友。很多人就是错信了”朋友“被杀害，这是最搞笑的，最不可能杀你的人，把你杀了。大概死了也想不通。我实在想不通这种人的人生意义是什么，只想我不要交到这种垃圾</p>
+
       
 
       
@@ -407,7 +575,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/undefined//" class="article-tag-list-link color5">undefined</a>
+        			<a href="/categories/日志//" class="article-tag-list-link color3">日志</a>
         		</li>
       		
 		</ul>
@@ -416,7 +584,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/undefined/js-1/">展开全文 >></a>
+          <a class="article-more-a" href="/日志/7-8/">展开全文 >></a>
         </p>
       
 
@@ -446,27 +614,43 @@
 
 
   
-    <article id="hello-js" class="article article-type-hello  article-index" itemscope itemprop="blogPost">
+    <article id="post-大小写" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/undefined/js/">js</a>
+      <a class="article-title" href="/english/大小写/">大小写</a>
     </h1>
   
 
         
-        <a href="/undefined/js/" class="archive-article-date">
-  	<time datetime="2018-11-26T05:02:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/english/大小写/" class="archive-article-date">
+  	<time datetime="2018-07-08T01:48:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h5 id="字母的大小写"><a href="#字母的大小写" class="headerlink" title="字母的大小写"></a>字母的大小写</h5><ol>
+<li>每一句话的首字母要大写</li>
+<li>英文中的姓与名要大写，表示对别人的尊重<br> Tom  Mary Lucy Smith</li>
+<li>城市、国家、国籍、等首字母要大写<br>London Paris  Peking  Chinese French     <mark>Peking : 北京</mark></li>
+<li>字母i表示“我” 的时候要大写成 I<br>I love you ,, You and I</li>
+<li>尊称的首字母要大写<br>Sir   Mr.Brown     Miss   Mrs.Smith   <mark>Sir ：对陌生人  Mr：已婚男士 Mrs：已婚女士 Miss：未婚女士</mark></li>
+<li>表示亲属关系的词汇用语称呼时往往大写<br>Good night,Dad.<br>This is my dad.<br>Thank you,Mom</li>
+</ol>
+<h5 id="句式"><a href="#句式" class="headerlink" title="句式"></a>句式</h5><p>Tom is a milkman<br>Is Tom a milkman?</p>
+<p>Is she an air hostess?  <mark>air hostess:空姐  hostess：女主人</mark><br>She is an air hostess.</p>
+<p>Mary is French.<br>Mary isn’t French</p>
+<p>My pen is in the bag.<br>Is  your pen in the bag?</p>
+<p>一般疑问句：是否可以用yes和no回答</p>
+<p>特殊疑问句：找到肯定句中被提问的部分<br>Sam is my hairdresser.<br>Who is Sam?</p>
+<p>Robert is Italian.<br>Who is Italian.</p>
+<h5 id="西方人的打扮"><a href="#西方人的打扮" class="headerlink" title="西方人的打扮"></a>西方人的打扮</h5><p>The man is walking with a hat on his head and an umbrella in his hand.<br>The woman is walking with a dog.  <mark>with a dog 遛狗  with  a umbrella</mark></p>
+
       
 
       
@@ -474,13 +658,24 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">新东方</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/undefined//" class="article-tag-list-link color5">undefined</a>
+        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
         		</li>
       		
 		</ul>
@@ -489,7 +684,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/undefined/js/">展开全文 >></a>
+          <a class="article-more-a" href="/english/大小写/">展开全文 >></a>
         </p>
       
 
@@ -521,7 +716,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -628,6 +823,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">初级口语</a>
               </li>
              
@@ -636,27 +835,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">新东方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">problem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,27 +855,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">vue组件</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vuex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -697,6 +880,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">echarts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
             
             <div class="clearfix"></div>

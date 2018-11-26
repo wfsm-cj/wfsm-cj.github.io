@@ -154,486 +154,27 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-7-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/undefined/hello/">hello</a>
+      <a class="article-title" href="/日志/7-1/">7-1</a>
     </h1>
   
 
         
-        <a href="/undefined/hello/" class="archive-article-date">
-  	<time datetime="2018-11-26T04:57:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-26</time>
+        <a href="/日志/7-1/" class="archive-article-date">
+  	<time datetime="2018-07-01T08:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/undefined//" class="article-tag-list-link color5">undefined</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/undefined/hello/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-bootstrap写侧面导航" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/bootstrap/bootstrap写侧面导航/">bootstrap写侧面导航</a>
-    </h1>
-  
-
-        
-        <a href="/bootstrap/bootstrap写侧面导航/" class="archive-article-date">
-  	<time datetime="2018-07-23T14:29:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="bootstrap-导航"><a href="#bootstrap-导航" class="headerlink" title="bootstrap 导航"></a>bootstrap 导航</h5><p>默认导航栏</p>
-<ul>
-<li>向nav标签添加 class为 .navbar  .navbar-default </li>
-<li>向上面的元素添加role=”navigation”  有助于增加可访问性</li>
-<li>向div元素添加一个标题class 为 .navbar-header 内部包含了带有class为 .navbar-brand 的 a元素。。这会让文本看起来更大一号</li>
-<li>为了向导航添加链接，只需要简单的添加带有class为 .nav .navbar-nav 的无序列表即可</li>
-</ul>
-<p>因为写的默认是向下滑的导航，而手机端往往是侧滑的导航<br>如下：</p>
-<ul>
-<li>写一个默认导航设置class为 .visible-md .visible-lg  在pc端显示</li>
-<li>写一个手机端导航 设置 class为 .visible-xs .visible-sm 在手机端显示</li>
-<li>写一个手机端控制导航按钮</li>
-<li>为手机端导航和控制按钮设置样式 利用transform:translateX(-220px);来隐藏和显示</li>
-</ul>
-<pre><code>&lt;!--手机导航栏--&gt;
-&lt;div id=&quot;mobile-menu&quot; class=&quot;mobile-nav visible-xs visible-sm&quot;&gt;
-    &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Java&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;SVN&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-&lt;!--pc端导航--&gt;
-&lt;nav class=&quot;navbar navbar-inverse visible-lg visible-md&quot; role=&quot;navigation&quot;&gt;
-    &lt;div class=&quot;container&quot;&gt;
-        &lt;div class=&quot;navbar-header&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot;&gt;菜鸟教程&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;IOS&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;SVN&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot;&gt;Java
-                    &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
-                &lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;
-&lt;!--手机导航控制按钮--&gt;
-&lt;div class=&quot;nav-btn visible-xs visible-sm&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;mobile-nav-toggle&quot; id=&quot;mobile-nav-toggle&quot;&gt;
-        &lt;span class=&quot;glyphicon glyphicon-align-justify&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/div&gt;
-
-//css
-#mobile-menu{
-    position: fixed;
-    top: 0;left: 0;width: 220px;height: 100%;background-color: #373737;z-index: 99;
-    transition: all 0.3s ease-in;
-}
-a:hover,a:focus{
-    text-decoration: none;
-}
-.mobile-nav ul li a{
-    color: gray;display: block;padding: 1em 5%;
-    border-top: 1px solid #4f4f4f;
-    border-bottom: 1px solid #292929;
-    transition: all 0.2s ease-out;
-    cursor: pointer;
-}
-.mobile-nav ul li a:hover{
-    background: #23a1f6;
-    color: #fff;
-}
-.show-nav{
-    transform: translateX(0);
-}
-.hide-nav{
-    transform: translateX(-220px);
-}
-.moblie-nav-toggle{
-    height: 35px;
-    line-height: 35px;
-    width: 35px;
-    background-color: #23A1F6;
-    color: #FFFFFF;
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-}    
-.nav-btn{
-    position: fixed;
-    top: 20px;right: 20px;
-}
-
-
-//js
-$(function(){
-    $(&apos;#mobile-nav-toggle&apos;).click(function(){
-        var mobileMenu=$(&apos;#mobile-menu&apos;);
-        if(mobileMenu.hasClass(&apos;show-nav&apos;)){
-                mobileMenu.addClass(&apos;hide-nav&apos;).removeClass(&apos;show-nav&apos;);
-        }else{
-            mobileMenu.addClass(&apos;show-nav&apos;).removeClass(&apos;hide-nav&apos;)
-        }
-    })
-})
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/bootstrap//" class="article-tag-list-link color5">bootstrap</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/bootstrap/bootstrap写侧面导航/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-bootstrap-01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/bootstrap/bootstrap-01/">bootstrap-01</a>
-    </h1>
-  
-
-        
-        <a href="/bootstrap/bootstrap-01/" class="archive-article-date">
-  	<time datetime="2018-07-23T02:32:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><em>为了确保适当的绘制和触屏缩放，需要在head中添加viewport元数据标签</em></strong></p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;
-</code></pre><h5 id="bootstrap基本全局样式"><a href="#bootstrap基本全局样式" class="headerlink" title="bootstrap基本全局样式"></a>bootstrap基本全局样式</h5><ul>
-<li>为body元素设置  background-color:#fff;</li>
-<li>使用@font-family-base、@font-size-base 和 @font-height-base 变量作为排版的基本参数</li>
-<li>为所有链接设置了基本颜色 @link-color ,并且当链接处于 ：hover状态时才添加下划线</li>
-<li>为了增强跨浏览器表现的一致性，使用了Normalize.css。重置css样式</li>
-</ul>
-<h5 id="类"><a href="#类" class="headerlink" title="类"></a>类</h5><p><strong><em>布局容器</em></strong><br>container<br>container-fluid       <mark>fluid：流动的</mark></p>
-<p><strong><em>栅格系统</em></strong><br>栅格系统用于通过一系列的行(row)与列(column)的组合来创建页面布局</p>
-<ul>
-<li>行(row) 必须包含在 .container 或 .container-fluid 中，以便为其赋予何时的排列(aligment)和内补(padding)</li>
-<li>通过行(row)在水平方向创建一组列(column)</li>
-<li>你的内容应当放置于列(column) 内，并且，只有列(column)可以作为行(row)的直接子元素</li>
-<li>所有列都应该放在row内</li>
-<li>多余的列将另起一行排列</li>
-<li>列偏移 .col-md-offset-* 类可以将列向右侧偏移， .com-md-offset-4 元素向右偏移了4个列宽度</li>
-<li>列嵌套 在一个列中在写一个row 包含其他的列，</li>
-<li>列排序 .col-md-push-<em>  将列往后推   .col-md-pull-</em> 将列往前推</li>
-</ul>
-<p><strong><em>屏幕宽度</em></strong></p>
-<ul>
-<li>超小屏幕 768  col-xs  None(自动)  <mark>.container最大宽度</mark>  手机 自动</li>
-<li>小屏幕   768–&gt;992   col-sm   750px   平板      62px  最大列宽</li>
-<li>中等屏幕 992–&gt;1200  col-md  970px  桌面显示器    81px</li>
-<li>大屏幕  1200+    col-lg  1170px   大桌面显示器   97px</li>
-</ul>
-<h5 id="排版"><a href="#排版" class="headerlink" title="排版"></a>排版</h5><ul>
-<li>h1   36px</li>
-<li>h2   30px</li>
-<li>h3   24px</li>
-<li>h4   18px</li>
-<li>h5   14px</li>
-<li>h6   12px</li>
-<li>在标题内还可以包含small标签 或赋予 .small 类的元素，可以用来标记副标题<br><strong><em>页面主体</em></strong></li>
-<li>Bootstrap将全局font-size设置为14px，line-height设置为1.428，，另外p元素还被设置了等于1/2行高 即(10px)的底部外边距 margin</li>
-<li>.lead类可以让段落突出显示</li>
-<li><mark> 高亮</mark>   <del>删除</del>   <s>无用文本</s>  <ins>插入文本</ins>   <u>带下划线文本</u>  <strong>着重</strong>  <em>斜体</em></li>
-<li>small标签  小号文本  ，其内的文本将被设置为父容器字体大小的85%。标题元素中嵌套的 small 元素被设置不同的font-size   可以用 .small 类代替任何small元素</li>
-</ul>
-<p><strong><em>对齐</em></strong></p>
-<ul>
-<li>.text-left .text-right .text-center .text-justify .text-nowrap</li>
-<li>改变大小写  .text-lowercase  .text-uppercase .text-capitalize  </li>
-<li>地址 address标签</li>
-<li>引用 blockquote 标签</li>
-<li>多种引用样式 对于标准样式的 blockquote，可以在底部添加footer标签标明引用来源，来源的名称可以包裹进 cite 标签</li>
-</ul>
-<h4 id="问题专区"><a href="#问题专区" class="headerlink" title="问题专区"></a>问题专区</h4><p><strong><em>bootstrap中 @baseFontFamily是什么意思</em></strong><br>相当于我定义了一个基础变量：baseFontFamily，假设其值为 font-size:14px;color:red;<br>如 h1{@baseFontFamily}  h1，引用了这个变量</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bootstrap</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/bootstrap//" class="article-tag-list-link color5">bootstrap</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/bootstrap/bootstrap-01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-名字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/english/名字/">名字</a>
-    </h1>
-  
-
-        
-        <a href="/english/名字/" class="archive-article-date">
-  	<time datetime="2018-07-08T02:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/english/名字/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-7-8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/日志/7-8/">7-8</a>
-    </h1>
-  
-
-        
-        <a href="/日志/7-8/" class="archive-article-date">
-  	<time datetime="2018-07-08T02:00:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="7-8"><a href="#7-8" class="headerlink" title="7-8"></a>7-8</h5><p>以后一周一次，或者一周两次。<br>这周比较烦，生病了。</p>
-<ul>
-<li>肠胃炎</li>
-<li>似乎没人关心我生病了，日子照常进行，该工作工作，该吃饭吃饭</li>
-<li>天天写静态页面，写的有点烦，下周还要接着写，却无法反驳</li>
-<li>婉儿也不理我，不知道怎么她了</li>
-</ul>
-<p>也许自己的生老病死与他人无关吧，只不过是一个工具而已，用的上就用，坏了就换，估计是这样<br>这几天在看书，发现一个东西，人太善良就会过于软弱。。然而人们不会把你的善良当作善良，你的重感情在别人看来是弱智。而最终给你的定论是，懦弱，无能。</p>
-<p>最近看到 朱祁镇 朱见深<br>    朱祁镇，这个皇帝一生并不算光彩，宠信过奸邪小人，打过败仗，当过俘虏，做过囚犯，杀过忠臣。他不是一个好皇帝，但是一个好人。他几乎信任了他身边的每一个人，从王振到徐有贞，再到石亨、李贤。 无论这些人是忠是歼。不管在什么样的环境，它都能够和善待人。这种心境让我感叹，这究竟是个什么样的人。 败仗之前，将权力交给他弟弟，朱祁钰，然而朱祁钰却不把他当哥哥，座上皇位后，不接他，接回来软禁，废太子，然而当他重新夺回皇位，该有仇报仇有怨报怨的时候，他第一反应却不是杀朱祁钰，等临死之前，对朱见深说出了最后的遗愿，不要任何人殉葬。。此人是真善良。<br>    然而他错信了不善良的人，他认为真诚的对待每一个人，他们便会真诚的为自己工作，所以选择相信身边每一个人，也不是说他的信任有错，只是作为帝王，这种信任是不被允许的。太信任就会出现一些奸佞，太重感情就会被利用。<br>    两岁被立为太子，因为朱祁镇被俘，太子也当不成了，还被监控起来。这才有了一段不伦之恋，我也喜欢比我大的，有时候我在想，到底是找一个母亲还是找一个婆娘。<br>        我发现一个共性，明朝的大多数皇帝，都很善良，可能是看惯了，朱元璋，朱棣的残暴，发现不应该如此。然而善良的人几乎不会是一个好皇帝，或者迟早被杀害的皇帝(赵匡胤)，你把别人当朋友，别人可不当你是朋友。很多人就是错信了”朋友“被杀害，这是最搞笑的，最不可能杀你的人，把你杀了。大概死了也想不通。我实在想不通这种人的人生意义是什么，只想我不要交到这种垃圾</p>
+        <p>今天去龙泉山摘桃子了。。<br>这几天婉儿都没怎么理我，嗯，，我笨啊，有什么你不会说出来吗<br>你真想和我一起吗，还是厌倦了。<br>。。。。。。。。。。<br>说不出的感觉</p>
 
       
 
@@ -657,7 +198,373 @@ $(function(){
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/日志/7-8/">展开全文 >></a>
+          <a class="article-more-a" href="/日志/7-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-git错误" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/other/git错误/">git错误</a>
+    </h1>
+  
+
+        
+        <a href="/other/git错误/" class="archive-article-date">
+  	<time datetime="2018-07-01T08:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安装好小乌龟git后，用小乌龟的pull 从github上拉去项目，遇到错误<br>disconnected no supported authentication methods available (server sent : publickey)<br>或者是  git did not exit cleanly (exit code 1)<br>亦或是 git did not exit cleanly (exit code 128)</p>
+        
+          <a class="article-more-a" href="/other/git错误/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/other//" class="article-tag-list-link color1">other</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/other/git错误/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hexo博客迁移" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/other/hexo博客迁移/">hexo博客迁移</a>
+    </h1>
+  
+
+        
+        <a href="/other/hexo博客迁移/" class="archive-article-date">
+  	<time datetime="2018-07-01T08:18:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="hexo网站迁移"><a href="#hexo网站迁移" class="headerlink" title="hexo网站迁移"></a>hexo网站迁移</h6><p>刚刚换了电脑，迁移博客遇到的问题</p>
+<p><strong><em>错误一</em></strong><br>fatal: HttpRequestException  encountered  解决方法<br>git 一旦提交就会弹出<br>fatal: HttpRequestException encountered<br>username for ‘<a href="https://github.com&#39;" target="_blank" rel="noopener">https://github.com&#39;</a> xxxxx<br>remote  : Invalid username or password</p>
+<p>输入自己的账号和密码。即使是正确的也 报错<br>网上查了一下发现是Github禁用了TLSv1.0 and v1.1 。。必须更新windows的git凭证管理器才行<br><a href="https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0" target="_blank" rel="noopener">https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0</a></p>
+<p>安装之后，不用输入密码也可以直接上传</p>
+<p><strong><em>错误二</em></strong></p>
+<p>之前域名绑定无效 出现404<br>需要在 yourname.github.io的根目录下添加CNAME<br>具体就是在Hexo目录里的source文件下添加一个名为<mark>CNAME</mark>的文件，这个文件是没有后缀的，文件的内容就是域名。格式如：<br>wfsm.xyz<br>添加后部署文件，这个时候再试，应该就成功了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/other//" class="article-tag-list-link color1">other</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/other/hexo博客迁移/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-6-30" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/日志/6-30/">6-30</a>
+    </h1>
+  
+
+        
+        <a href="/日志/6-30/" class="archive-article-date">
+  	<time datetime="2018-06-30T00:49:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="6-30"><a href="#6-30" class="headerlink" title="6-30"></a>6-30</h4><p>傻逼不理我了，我不知道为什么。。。真不知道<br>什么也不跟我说<br>呵呵，估计有人和她玩吧<br>几天没写日志，几天没开电脑<br>改了几天的页面<br>很难受。。想买电脑，买不起，傻逼不理劳资</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/日志//" class="article-tag-list-link color3">日志</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/日志/6-30/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-求职面试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/english/求职面试/">求职面试</a>
+    </h1>
+  
+
+        
+        <a href="/english/求职面试/" class="archive-article-date">
+  	<time datetime="2018-06-25T14:23:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h5><p><strong><em>面试官</em></strong></p>
+<ul>
+<li>Will you come in please?  <mark>请进</mark></li>
+<li>Is it easy for you to find our company?</li>
+<li>Have a seat,please  <mark>请坐</mark></li>
+</ul>
+<p><strong><em>应聘者</em></strong></p>
+<ul>
+<li>May i come in ?</li>
+<li>I’m here for an interview by appointment   <mark>interview:面试，面谈  </mark></li>
+</ul>
+<h5 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h5><p><strong><em>面试官</em></strong></p>
+<ul>
+<li>What is your name? </li>
+<li><p>May i have your name ?</p>
+</li>
+<li><p>How old are you ?  <mark>跟老外询问年龄最好不用这个 ：涉及隐私</mark></p>
+</li>
+<li>May i ask your age?</li>
+<li>Would you mind if i ask your age?</li>
+<li><p>When were you born?</p>
+</li>
+<li><p>Where are you from?</p>
+</li>
+<li>Where do you come from?</li>
+<li>Where is your native place?</li>
+</ul>
+<p>Where do you live now?</p>
+<p>Can you tell me something about your family?</p>
+<p>Are you married or single?<br>How long have you been married?</p>
+<h5 id="性格和爱好"><a href="#性格和爱好" class="headerlink" title="性格和爱好"></a>性格和爱好</h5><p>What kind of character  do you think you have?<br>Are you introverted or extroverted?   <mark>introvert：内向 extroverted：外向</mark><br>Do you have any particular strengths or weakness <mark>particular:特别的  strength：力量，长处  weakness：弱点</mark><br>What basic principles do you apply to your life?  <mark>principle:原理  apply to:适用于</mark><br>What kind of person would you like to work with?<br>How do you get along with others?  <mark>get along with : 与…和睦相处</mark></p>
+<p>What are your hobbies ?  <mark>hobby :爱好</mark><br>How do you spend your spare time? <mark>spare:节约，吝惜</mark><br>What kind of sport do you like most?</p>
+<h5 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h5><p>Which university did you graduate from?<br>When did you graduate from school?<br>What did you major in at university? <mark>major in :主修</mark><br>What courses did you study at university?  <mark>course:课程</mark><br>What degree have you got？ <mark>degree：程度，等级</mark><br>How about your academic records at university?   <mark>academic：学术的</mark></p>
+<p>回答<br>I graduated from PeiKing University<br>I graduated from school in 2014<br>I major in English at university<br>I have got a Bachelor’s degree.<br>I was one of the top students in the class at university</p>
+<h5 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h5><p>Do you have any work experience in this field?  <mark>field:领域</mark><br>What kind of jobs have you had?<br>What’s your responsibility at your present company?  <mark>responsibility:职责,</mark><br>What have you learned from the jobs you have had?<br>How would you evaluate your present company? <mark>evaluate:评估</mark></p>
+<p>回答<br>I worked as an engineer two years ago.<br>I have been a teacher.<br>I am responsible for product distribution <mark>responsible：为..负责  distribution:分布</mark></p>
+<h5 id="离职和应聘原因"><a href="#离职和应聘原因" class="headerlink" title="离职和应聘原因"></a>离职和应聘原因</h5><p>Why do you want to leave your present job and join us?<br>Why do you want to apply for  a position in our company?<br>Why do you think you are qualified for this position ? <mark>qualified:合格的</mark></p>
+<p>回答<br>The job is out of my major. <mark>我的工作和我专业无关</mark><br>I am looking for a more challenging opportunity. <mark>opportunity:时机，机会</mark><br>My former company has been out of business. <mark>former:从前的  out of business ：破产</mark><br>My major and working experience make me qualified for this position.  <mark>—-</mark></p>
+<p>#####薪酬期望<br>What is your salary at present?<br>What are your salary expectations? <mark>expectation:期望</mark><br>What’s your expected salary?  <mark>expect:期望</mark><br>I can only offer you 20,000Yuan a year.<br>Raises will be given after a three-month probation according to your performance<br><mark>raises:饲养，加薪 probation：试用</mark></p>
+<p>回答<br>I expect to be paid according to my abilities<br>With my experience , i’d like to start at RMB 4000 per month<br>How long is my probation?<br>I think salary is closely related to the responsibilities of the job</p>
+<h5 id="结束面试"><a href="#结束面试" class="headerlink" title="结束面试"></a>结束面试</h5><p>Thank you for your interest in our company  <mark> 谢谢你来参加我们公司的面试</mark><br>Well,that’s all for the interview   <mark>interview ：面谈</mark><br>How can we get in touch with you ? <mark>get in touch :联系</mark></p>
+<p>回答<br>When will i know your decision?<br>I’ll look forward to hearing from you ?</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/english/求职面试/">展开全文 >></a>
         </p>
       
 
@@ -689,7 +596,7 @@ $(function(){
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -796,6 +703,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">初级口语</a>
               </li>
              
@@ -804,27 +715,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">新东方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">problem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -836,27 +735,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">vue组件</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vuex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -865,6 +760,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">echarts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
             
             <div class="clearfix"></div>

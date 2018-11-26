@@ -154,33 +154,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-道别用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/english/道别用语/">道别用语</a>
+      <a class="article-title" href="/vue/vue/">vue</a>
     </h1>
   
 
         
-        <a href="/english/道别用语/" class="archive-article-date">
-  	<time datetime="2018-06-12T15:08:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+        <a href="/vue/vue/" class="archive-article-date">
+  	<time datetime="2018-06-10T01:38:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="一般性道别用语"><a href="#一般性道别用语" class="headerlink" title="一般性道别用语"></a>一般性道别用语</h5><ul>
-<li>Bye-bye /Good-bye  / Bye</li>
-<li>See you / See you later / See you soon   <mark>soon ：快，不久</mark></li>
-<li>Good night   <mark>good evening:晚上见面的时候   Good night： 是告别</mark>
-        
-          <a class="article-more-a" href="/english/道别用语/#more">more >></a>
-        
+        <pre><code>全局安装 vue-cli
+cnpm install vue-cli --global
+创建一个基于webpack 的 新项目
+vue init webpack my-project
+这里需要进行一些配置，。。。
+。。。
+后面有提示。。。
+</code></pre><h5 id="生命周期钩子函数"><a href="#生命周期钩子函数" class="headerlink" title="生命周期钩子函数"></a>生命周期钩子函数</h5><p>beforeCreate  ： 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。<br>created : 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。<br>beforeMount : 在挂载开始之前被调用：相关的 render 函数首次被调用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<p>mounted : el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。<br>beforeUpdate : 数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</p>
+<p>该钩子在服务器端渲染期间不被调用，因为只有初次渲染会在服务端进行。</p>
+<p>updated :由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。</p>
+<p>当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</p>
+<p>activated : keep-alive 组件激活时调用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<p>deactivated : keep-alive 组件停用时调用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<p>beforeDestroy : 实例销毁之前调用。在这一步，实例仍然完全可用。</p>
+<p>该钩子在服务器端渲染期间不被调用。<br>destroyed : Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</p>
+<p>errorCaptured : 当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返回 false 以阻止该错误继续向上传播。</p>
+
       
 
       
@@ -193,11 +207,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">初级口语</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -209,7 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
+        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -218,7 +228,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/english/道别用语/">展开全文 >></a>
+          <a class="article-more-a" href="/vue/vue/">展开全文 >></a>
         </p>
       
 
@@ -248,33 +258,29 @@
 
 
   
-    <article id="post-祝福用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vuex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/english/祝福用语/">祝福用语</a>
+      <a class="article-title" href="/vue/vuex/">vuex</a>
     </h1>
   
 
         
-        <a href="/english/祝福用语/" class="archive-article-date">
-  	<time datetime="2018-06-12T14:18:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+        <a href="/vue/vuex/" class="archive-article-date">
+  	<time datetime="2018-06-10T01:26:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="常用的祝贺用语"><a href="#常用的祝贺用语" class="headerlink" title="常用的祝贺用语"></a>常用的祝贺用语</h5><ul>
-<li>Congratulations</li>
-<li>Congratulations on the opening of your company</li>
-<li>Congratulations on your promotion  <mark>promotion ：晋升</mark></li>
-<li>Congratulations on your marriage
+        <p>如果你不打算开发大型单页应用，使用Vuex可能是繁琐冗余的<br>vuex给我的感觉就是将数据提出去计算了，然后按照他的规定引用进去<br>有四个常规概念<br>    State ： 一般的数据<br>    Getter ： 计算属性<br>    Mutation：同步方法    <mark>mutation:突变</mark><br>    Action ： 异步方法<br>
         
-          <a class="article-more-a" href="/english/祝福用语/#more">more >></a>
+          <a class="article-more-a" href="/vue/vuex/#more">more >></a>
         
       
 
@@ -288,11 +294,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">初级口语</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">vuex</a>
         		</li>
       		
 		</ul>
@@ -304,7 +310,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
+        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -313,7 +319,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/english/祝福用语/">展开全文 >></a>
+          <a class="article-more-a" href="/vue/vuex/">展开全文 >></a>
         </p>
       
 
@@ -343,27 +349,27 @@
 
 
   
-    <article id="post-6-12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-6-9" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/日志/6-12/">6-12</a>
+      <a class="article-title" href="/日志/6-9/">6-9</a>
     </h1>
   
 
         
-        <a href="/日志/6-12/" class="archive-article-date">
-  	<time datetime="2018-06-12T13:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+        <a href="/日志/6-9/" class="archive-article-date">
+  	<time datetime="2018-06-09T14:46:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="6-12"><a href="#6-12" class="headerlink" title="6-12"></a>6-12</h5><p>最近喜欢一首歌，“可能否”。。 听第一遍就喜欢了。。夜空的星，能否落向晨曦的海。<br>。。。。。。。可能我撞了南墙才会回头吧，可能我见了黄河才会死心吧。<br>我觉得我是撞了南墙也不会回头的。。。。。。。坚持自己的东西就好。。。。。<br>人生本来就匆匆，如果想玩的不能玩，那才多无聊。。我不后悔这几年的生活，只是遗憾，在人生最美好的时刻，迷失了自己。<br>我看我以前的照片，当时的我是多么的自信，开朗，猖狂，年少。然而渐渐的被岁月磨去了，最初了那一份执着，任性。磨去了我最初的梦想。我五年前的梦想和现在的截然不同。可以说，五年前我是没梦想的，我还陷入孩童的无知与纯真中。这几年，不后悔，但是惋惜<br>搬东西回到家，最多的就是书了，然而很多都没有去看。我反思这几年经历了什么。。为什么那些闪光点都逐渐离开了我。我想尽力去扳回一些东西，有些时候却发现力不从心。尤其是在记忆力方面。我问自己干了什么。。<br>打了几年游戏。。<br>我也在想，为什么会有这种思想。无欲无求。。。可能从初高中就开始喜欢玄学把。玄学给我带来的是宽阔的心境， 然而也有负面的，无欲无求，不争名利。。然而我发现，这个世界，不争名利，会被说成不上进，不说话，会被说成不合群，不趋炎附势，会被说成不会做人。一群群兜着社会经验的流氓，以他们现如今生活的姿态告诉我，要想融入社会，就得变成他们那样。。<br>。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。</p>
+        <p>今天看了芳华。<br>“没有被善待的人，最容易识别善良，也最珍惜善良。” 适合带长辈们看，或许多少年后，就没人再拍这样的电影了…后面半小时泪弹太足，我们在最好的年代虚度光阴，他们在最坏的年代洗尽铅华。<br>里面描述了几种人，有趋附权势的，老实的，一般的常人，。<br>然而最终给我的感觉：让我想到LOL中的台词：<br>“好人都死了，我选择生存”<br>“我做了很多不光彩的事情，我是仅存的斥候”<br>“战争没有改变我，我改变了战争”<br>哈哈哈，，，，我们寝室要毕业旅行。。<br>而后还有工作的问题</p>
 
       
 
@@ -387,7 +393,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/日志/6-12/">展开全文 >></a>
+          <a class="article-more-a" href="/日志/6-9/">展开全文 >></a>
         </p>
       
 
@@ -417,126 +423,118 @@
 
 
   
-    <article id="post-电话用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-game" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/english/电话用语/">电话用语</a>
+      <a class="article-title" href="/game/game/">game</a>
     </h1>
   
 
         
-        <a href="/english/电话用语/" class="archive-article-date">
-  	<time datetime="2018-06-10T12:18:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
+        <a href="/game/game/" class="archive-article-date">
+  	<time datetime="2018-06-09T14:32:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h5><p><strong><em>电话用语中自我介绍一定不能用。“i am…”<br>用 This is + 人名 + speaking</em></strong></p>
+        <h5 id="geris-俄罗斯方块"><a href="#geris-俄罗斯方块" class="headerlink" title="geris  俄罗斯方块"></a>geris  俄罗斯方块</h5><p><a href="http://wfsm.xyz/game-js/geris">http://wfsm.xyz/game-js/geris</a></p>
+<h5 id="snake-贪吃蛇"><a href="#snake-贪吃蛇" class="headerlink" title="snake 贪吃蛇"></a>snake 贪吃蛇</h5><p><a href="http://wfsm.xyz/game-js/snake">http://wfsm.xyz/game-js/snake</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">game</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/game//" class="article-tag-list-link color5">game</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/game/game/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-时间用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/english/时间用语/">时间用语</a>
+    </h1>
+  
+
+        
+        <a href="/english/时间用语/" class="archive-article-date">
+  	<time datetime="2018-06-09T13:31:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="时刻"><a href="#时刻" class="headerlink" title="时刻"></a>时刻</h5><p><strong><em>询问时间</em></strong></p>
 <ul>
-<li>This is Tom speaking</li>
-<li>This is Wanlin speaking
+<li>What time is it now ?</li>
+<li>Do you have the time?  <mark>现在几点  do you have time 你有 时间吗</mark>
         
-          <a class="article-more-a" href="/english/电话用语/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">初级口语</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">English</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/english/电话用语/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-帮忙用语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/english/帮忙用语/">帮忙用语</a>
-    </h1>
-  
-
-        
-        <a href="/english/帮忙用语/" class="archive-article-date">
-  	<time datetime="2018-06-10T12:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="提供帮忙用语"><a href="#提供帮忙用语" class="headerlink" title="提供帮忙用语"></a>提供帮忙用语</h5><ul>
-<li>Can I help you?</li>
-<li>What can I do for you ?</li>
-<li>Is there anything I can do for you?
-        
-          <a class="article-more-a" href="/english/帮忙用语/#more">more >></a>
+          <a class="article-more-a" href="/english/时间用语/#more">more >></a>
         
       
 
@@ -575,7 +573,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/english/帮忙用语/">展开全文 >></a>
+          <a class="article-more-a" href="/english/时间用语/">展开全文 >></a>
         </p>
       
 
@@ -607,7 +605,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
     </nav>
   
 
@@ -714,6 +712,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">game</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">初级口语</a>
               </li>
              
@@ -722,27 +724,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">game</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">新东方</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">problem</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -754,27 +744,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">vue组件</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue-router</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">vuex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -783,6 +769,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">echarts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
             
             <div class="clearfix"></div>
