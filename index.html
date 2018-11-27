@@ -154,6 +154,224 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-11-27" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/心情/11-27/">11-27</a>
+    </h1>
+  
+
+        
+        <a href="/心情/11-27/" class="archive-article-date">
+  	<time datetime="2018-11-27T13:59:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="11-27"><a href="#11-27" class="headerlink" title="11-27"></a>11-27</h2><p>我大概不配被人爱吧</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">心情</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/心情//" class="article-tag-list-link color3">心情</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/心情/11-27/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-php验证码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/php/php验证码/">php验证码</a>
+    </h1>
+  
+
+        
+        <a href="/php/php验证码/" class="archive-article-date">
+  	<time datetime="2018-11-27T12:56:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="php验证码"><a href="#php验证码" class="headerlink" title="php验证码"></a>php验证码</h3><p>##技术实现</p>
+<ol>
+<li>生成底图<br> 依赖php图片处理库GD<pre><code>检查是否支持gd 。。输入phpinfo()查看
+</code></pre></li>
+<li>生成验证内容<br> mt_rand()<br> ASCLL<br> UTF-8 编码理论呢<br> PHP操作session将验证内容保存在服务端。。(这里不讨论分布式服务器)</li>
+<li>生成验证码图片</li>
+<li>校验验证内容</li>
+</ol>
+<pre><code>session_start();// 写在顶端  调用session
+header(&quot;content-type:image/png&quot;);
+$image=@imagecreatetruecolor(100,30) or die(&apos;cannot initialize new GD image stream&apos;);
+$text_color=imagecolorallocate($image,233,14,91);
+$bg_color=imagecolorallocate($image,255,255,255);
+imagefill($image,0,0,$bg_color);
+
+//添加干扰元素  点
+for($i=0;$i&lt;200;$i++){
+    $pointcolor=imagecolorallocate($image,rand(50,200),rand(50,200),rand(50,200));
+    imagesetpixel($image,rand(1,99),rand(1,29),$pointcolor);
+}
+
+//线
+for($i=0;$i&lt;4;$i++){
+    $linecolor=imagecolorallocate($image,rand(80,220),rand(80,220),rand(80,220));
+    imageline($image,rand(1,99),rand(1,29),rand(1,99),rand(1,29),$linecolor);
+}
+
+
+//生成字符 把一些容易起冲突的字符干掉 比如 0 和o   L和1  2和z
+$data=&quot;abcdefghijkmnopqrstuvwy3456789&quot;;
+$fontsize=6;  //字体大小
+$strlength=strlen($data);
+$captcha_code=&quot;&quot;;  //将这个字符存入session中
+
+for($i=0;$i&lt;4;$i++){
+    $fontcolor=imagecolorallocate($image,rand(0,120),rand(0,120),rand(0,120));
+    $fontcontent=substr($data,rand(0,$strlength),1);
+    $x=($i*100/4)+rand(5,10);
+    $y=rand(5,10);
+    $captcha_code.=$fontcontent;
+    imagestring($image,$fontsize,$x,$y,$fontcontent,$fontcolor);
+}
+
+$_SESSION[&apos;authcode&apos;]=$captcha_code;
+
+imagepng($image);
+imagedestroy($image);
+</code></pre><p>#中文验证码的实现<br>    1，有自己的中文字体库<br>    2, imagettftext(resource $image,float $size,float $angle,int $x,int $y,int $color,string $fontfile,string $text);</p>
+<p>#图片验证码的实现<br>    1，有自己的图片库<br>    2，将每一个图片和一个key值对应成一个数组，验证验证码时候每个图片对应的key值即可</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/php//" class="article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/php/php验证码/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-11-26" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -545,164 +763,9 @@ $(function(){
 
 
   
-    <article id="post-名字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/english/名字/">名字</a>
-    </h1>
-  
-
-        
-        <a href="/english/名字/" class="archive-article-date">
-  	<time datetime="2018-07-08T02:57:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/english//" class="article-tag-list-link color3">english</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/english/名字/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-7-8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/日志/7-8/">7-8</a>
-    </h1>
-  
-
-        
-        <a href="/日志/7-8/" class="archive-article-date">
-  	<time datetime="2018-07-08T02:00:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="7-8"><a href="#7-8" class="headerlink" title="7-8"></a>7-8</h5><p>以后一周一次，或者一周两次。<br>这周比较烦，生病了。</p>
-<ul>
-<li>肠胃炎</li>
-<li>似乎没人关心我生病了，日子照常进行，该工作工作，该吃饭吃饭</li>
-<li>天天写静态页面，写的有点烦，下周还要接着写，却无法反驳</li>
-<li>婉儿也不理我，不知道怎么她了</li>
-</ul>
-<p>也许自己的生老病死与他人无关吧，只不过是一个工具而已，用的上就用，坏了就换，估计是这样<br>这几天在看书，发现一个东西，人太善良就会过于软弱。。然而人们不会把你的善良当作善良，你的重感情在别人看来是弱智。而最终给你的定论是，懦弱，无能。</p>
-<p>最近看到 朱祁镇 朱见深<br>    朱祁镇，这个皇帝一生并不算光彩，宠信过奸邪小人，打过败仗，当过俘虏，做过囚犯，杀过忠臣。他不是一个好皇帝，但是一个好人。他几乎信任了他身边的每一个人，从王振到徐有贞，再到石亨、李贤。 无论这些人是忠是歼。不管在什么样的环境，它都能够和善待人。这种心境让我感叹，这究竟是个什么样的人。 败仗之前，将权力交给他弟弟，朱祁钰，然而朱祁钰却不把他当哥哥，座上皇位后，不接他，接回来软禁，废太子，然而当他重新夺回皇位，该有仇报仇有怨报怨的时候，他第一反应却不是杀朱祁钰，等临死之前，对朱见深说出了最后的遗愿，不要任何人殉葬。。此人是真善良。<br>    然而他错信了不善良的人，他认为真诚的对待每一个人，他们便会真诚的为自己工作，所以选择相信身边每一个人，也不是说他的信任有错，只是作为帝王，这种信任是不被允许的。太信任就会出现一些奸佞，太重感情就会被利用。<br>    两岁被立为太子，因为朱祁镇被俘，太子也当不成了，还被监控起来。这才有了一段不伦之恋，我也喜欢比我大的，有时候我在想，到底是找一个母亲还是找一个婆娘。<br>        我发现一个共性，明朝的大多数皇帝，都很善良，可能是看惯了，朱元璋，朱棣的残暴，发现不应该如此。然而善良的人几乎不会是一个好皇帝，或者迟早被杀害的皇帝(赵匡胤)，你把别人当朋友，别人可不当你是朋友。很多人就是错信了”朋友“被杀害，这是最搞笑的，最不可能杀你的人，把你杀了。大概死了也想不通。我实在想不通这种人的人生意义是什么，只想我不要交到这种垃圾</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/日志//" class="article-tag-list-link color3">日志</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/日志/7-8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -805,6 +868,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">新东方</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">初级口语</a>
               </li>
              
@@ -813,23 +880,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">新东方</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">game</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue组件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">bootstrap</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -841,11 +908,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">jq</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">jq</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -853,11 +920,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue组件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日志</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -865,15 +928,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
+                <a href="javascript:void(0)" class="js-tag color3">日志</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -882,6 +941,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">echarts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
             
             <div class="clearfix"></div>
